@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+  <input type="text" id="txtNumber" value="5"/>
+  <br><br>
+  <input type="button" value="check odd or even" on click ="checkoddeven()"/>
+  <br><br><br><br>
+  <label id="lblMessage"></label>
+</body>
+</html>
+<script>
+//console.log(document.getElementaryById('txtNumber').value);
+//sum();
+function checkoddeven()
+{
+  var num=document.getElementById('txtNumber').value; 
+  if(num%2==0){
+  document.getElementById('lblMessage').innerHTML=num+"even";}
+  else{
+  document.getElementById('lblMessage').innerHTML=num+"odd";}
+  
+}
+//function sum(){
+//var number1=6,number2=7;
+//console.log(number1+number2);
+//}
+</script>

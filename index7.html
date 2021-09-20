@@ -1,0 +1,72 @@
+<html>
+ 
+<head>
+ 
+</head>
+ 
+<body>
+    <form>
+        <label>Country</label>
+        <br>
+        <select id="ddlCountry" onchange="BindStateDropdown()">
+            <option>Please select a country
+            </option>
+            <option>India
+            </option>
+            <option>Australia
+            </option>
+            <option>USA
+            </option>
+        </select><br><br>
+        <label>State</label>
+        <br>
+        <select id="ddlState" onchange="BindCityDropdown()">
+        <option>Please Select a state
+        </option>
+        <option>Ap
+         </option>
+         <option>Karnataka
+         </option>
+         <option>Telangana
+         <option>
+         </select><br><br>
+ 
+    </form>
+</body>
+ 
+</html>
+<script>
+    function BindStateDropdown() {
+        var txtCountry = document.getElementById('ddlCountry').value;
+        switch (txtCountry) {
+            case 'India':
+                document.getElementById('ddlState').innerHTML =
+                    '<option>select state</option><option>Karnataka</option>'
+                break;
+                case 'USA':
+                document.getElementById('ddlState').innerHTML =
+                    '<option>select state</option><option>Atlanta</option>'
+                break;
+            default:
+                document.getElementById('ddlState').innerHTML = '';
+                break;
+ 
+        }
+    }
+    function BindCityDropdown(){
+        var txtCountry = document.getElementById('ddlCountry').value;
+        switch (txtCountry) {
+            case 'AP':
+                document.getElementById('ddlState').innerHTML =
+                    '<option>select state</option><option>Guntur</option>'
+                break;
+                case 'Karnataka':
+                document.getElementById('ddlState').innerHTML =
+                    '<option>select state</option><option>Banglore</option>'
+                break;
+            default:
+                document.getElementById('ddlState').innerHTML = '';
+                break;
+        
+    }
+</script>
